@@ -22,9 +22,11 @@ def merge_sort(arr):
 
     return merged
 
+
 def is_anagram(first_string, second_string):
     if not first_string and not second_string:
         return ('', '', False)
+
     def clean_and_sort(s):
         return ''.join(merge_sort(list(filter(str.isalpha, s.lower()))))
 
@@ -34,5 +36,3 @@ def is_anagram(first_string, second_string):
     is_anagram = cleaned_first == cleaned_second
 
     return (cleaned_first, cleaned_second, is_anagram)
-
-
